@@ -1,4 +1,3 @@
-import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLineEdit, QMessageBox, QLabel, QVBoxLayout, QDesktopWidget , QDialog
 from PyQt5 import uic
 from PyQt5.QtGui import QIcon
@@ -6,8 +5,6 @@ from PyQt5.QtCore import Qt, QUrl, QTimer
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 import os
 import folium
-
-
 
 class GPSMapApp(QWidget):
     def __init__(self):
@@ -77,15 +74,12 @@ class GPSMapViewer(QDialog):
         layout.addWidget(self.map_view)
         self.setWindowTitle("Map Viewer")
      
-
-
-
 class MainWindow(QWidget):
     def __init__(self, username):
         super().__init__()
-        uic.loadUi("D:\Valeo GradProj\GUI\MainWindow.ui", self)
+        uic.loadUi(utils.PATH('../ui/MainWindow.ui'), self)
         self.setWindowTitle("Main Window")
-        self.setWindowIcon(QIcon("D:\\Valeo GradProj\\ios-car-3.png"))
+        # self.setWindowIcon(QIcon("D:\\Valeo GradProj\\ios-car-3.png"))
         button_MAP = self.findChild(QPushButton, 'pushButton')
         button_Setting = self.findChild(QPushButton, 'pushButton_2')
         button_Help = self.findChild(QPushButton, 'pushButton_3')
@@ -97,14 +91,10 @@ class MainWindow(QWidget):
          self.map_window.show()
          self.close()
 
-
-
-
-
 class UI(QWidget):
     def __init__(self):
         super().__init__()
-        uic.loadUi("D:\\Valeo GradProj\\GUI\\login.ui", self)  # Load the Qt Designer UI file
+        uic.loadUi(utils.PATH('../ui/login.ui'), self)  # Load the Qt Designer UI file
 
         # Find the button and line edit
         button = self.findChild(QPushButton, 'pushButton')
@@ -116,7 +106,7 @@ class UI(QWidget):
 
         # Set window properties
         self.setWindowTitle("AROS")
-        self.setWindowIcon(QIcon("D:\\Valeo GradProj\\ios-car-3.png"))
+        # self.setWindowIcon(QIcon("D:\\Valeo GradProj\\ios-car-3.png"))
 
         self.main_window = None
 
@@ -138,8 +128,4 @@ class UI(QWidget):
             success_box.addButton(QMessageBox.Ok)
             success_box.exec_()
 
-if __name__ == '__main__':
-    myApp = QApplication(sys.argv)
-    myWindow = UI()
-    myWindow.show()
-    sys.exit(myApp.exec_())
+
