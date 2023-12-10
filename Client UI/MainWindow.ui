@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>557</width>
+    <height>454</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color : rgb(35, 35, 35)</string>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>10</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Open Sans Light</family>
+     <pointsize>-1</pointsize>
+     <underline>false</underline>
+     <strikeout>false</strikeout>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">  border: none;
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color : rgb(35, 35, 35);
+  color: #fff; /* Set text color */
+  text-decoration: none; /* Remove underline for links */
+  display: inline-block;
+  font-size: 16px; /* Adjust font size as needed */
+  cursor: pointer;
+  border-bottom: 2px solid #ccc; /* Set bottom border properties */</string>
+   </property>
+   <property name="text">
+    <string>MAP</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>10</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">  border: none;
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color : rgb(35, 35, 35);
+  color: #fff; /* Set text color */
+  text-decoration: none; /* Remove underline for links */
+  display: inline-block;
+  font-size: 16px; /* Adjust font size as needed */
+  cursor: pointer;
+  border-bottom: 2px solid #ccc; /* Set bottom border properties */</string>
+   </property>
+   <property name="text">
+    <string>Setting</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>10</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">  border: none;
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color : rgb(35, 35, 35);
+  color: #fff; /* Set text color */
+  text-decoration: none; /* Remove underline for links */
+  display: inline-block;
+  font-size: 16px; /* Adjust font size as needed */
+  cursor: pointer;
+  border-bottom: 2px solid #ccc; /* Set bottom border properties */
+	</string>
+   </property>
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
