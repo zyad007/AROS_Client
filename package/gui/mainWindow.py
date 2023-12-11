@@ -3,7 +3,9 @@ import time
 
 from package.gui.sideWindow import SideWindow
 from package.service.userServices import UserServices
+from package.service.mapServices import MapServices 
 from package.gui.mapWindow import MapWindow
+
 
 
 class MainWindow(QtWidgets.QWidget):
@@ -11,7 +13,7 @@ class MainWindow(QtWidgets.QWidget):
         super().__init__()
 
         # Init Services
-        userServices = UserServices(); 
+        userServices = UserServices()
 
         # Config Window
         self.setWindowTitle('AROS - Auto Reporitng Obstacle')

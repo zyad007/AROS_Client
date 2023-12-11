@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QApplication, QWidget
+from PyQt5.QtWidgets import QApplication
 import sys
 
 from package.gui.mainWindow import MainWindow
@@ -10,6 +10,6 @@ def run():
     #START
     w = MainWindow()
     #END
-
+    
     #exit app
     return myApp.exec_()
