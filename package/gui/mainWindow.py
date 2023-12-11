@@ -13,7 +13,7 @@ class MainWindow(QtWidgets.QWidget):
         super().__init__()
 
         # Init Services
-        userServices = UserServices(); 
+        userServices = UserServices()
 
         # Config Window
         self.setWindowTitle('AROS - Auto Reporitng Obstacle')
