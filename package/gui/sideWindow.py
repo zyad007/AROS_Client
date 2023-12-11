@@ -30,8 +30,11 @@ class SideWindow(QWidget):
         self.layout().addWidget(self.stackedWidget)
 
         self.setStyleSheet('background-color:white;')
-        self.show()
 
     def setStackIndex(self, i):
         self.stackedWidget.setCurrentIndex(i)
+
+    def setNewColor(self):
+        self.setStyleSheet('background-color: black;')
+        self.show()
 

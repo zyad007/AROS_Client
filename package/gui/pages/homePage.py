@@ -30,8 +30,6 @@ class HomePage(pqw.QWidget):
         clicked = lambda: loginButtonOnClick())
         self.layout().addWidget(loginButton)
 
-        self.show()
-
         def loginButtonOnClick():
 
             username = usernameField.text()

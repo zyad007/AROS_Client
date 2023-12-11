@@ -1,17 +1,25 @@
-from PyQt5 import QtWidgets, QtGui, QtCore
+from PyQt5 import QtWidgets, QtGui, QtCore, QtWebEngineWidgets
+import folium
 
-class MapWindow(QtWidgets.QWidget):
+from package.service.mapServices import MapServices
+
+class MapWindow(QtWidgets.QFrame):
     def __init__(self, parent):
         super().__init__(parent)
+        self.setStyleSheet('border : 2px solid black; border-radius: 7px; background-color: #e6e6e6;')
+
+        # Init Map Services
+        mapServices = MapServices()
 
         # Set Layout
         self.setLayout(QtWidgets.QVBoxLayout())
-        # self.setMinimumWidth(500)
 
-        # Label
-        label = QtWidgets.QLabel("Hello")
-        label.setStyleSheet('background-color: blue;')
+        self.layout().addWidget(mapServices.initMapWidget(self))
+        
 
-        self.layout().addWidget(label)
 
-        self.show()
+    
+
+
+
+        

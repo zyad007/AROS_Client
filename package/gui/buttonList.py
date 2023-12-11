@@ -18,7 +18,6 @@ class ButtonList(QWidget):
         self.layout().addWidget(reportButton)
 
         self.setStyleSheet('background-color: red;')
-        self.show()
 
         def switchToHome():
             parent.setStackIndex(0)
