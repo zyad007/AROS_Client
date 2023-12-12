@@ -18,8 +18,8 @@ class SideWindow(QtWidgets.QFrame):
         self.stackedWidget = QtWidgets.QStackedWidget()
         
         homePage = HomePage(self)
-        settingsPage = HomePage(self)
-        reportPage = HomePage(self)
+        settingsPage = QtWidgets.QTabWidget(self)
+        reportPage = QtWidgets.QTabWidget(self)
 
         self.stackedWidget.addWidget(homePage)
         self.stackedWidget.addWidget(settingsPage)
