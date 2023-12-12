@@ -17,6 +17,7 @@ class MainWindow(QtWidgets.QWidget):
 
         # Config Window
         self.setWindowTitle('AROS - Auto Reporitng Obstacle')
+        self.setStyleSheet('background-color : black;')
 
         # Get the screen dimensions
         screen = QtWidgets.QDesktopWidget().screenGeometry()
