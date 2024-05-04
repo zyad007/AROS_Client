@@ -1,6 +1,7 @@
 import folium
 import io
 from PyQt5 import QtWebEngineWidgets
+import PyQt5.QtWidgets as qt
 import threading
 import time
 
@@ -11,19 +12,20 @@ class MapServices(metaclass= SingletonMeta):
     
     def __init__(self):
         self.mapWidget: QtWebEngineWidgets.QWebEngineView = None
-        self.obstacles: [Obstacle] = []  # { lat:float, lng:float, description:str }
+        self.obstacles: [Obstacle] = [Obstacle(30.001220, 31.167195, 'Obstacle')]  # { lat:float, lng:float, description:str }
 
     def initMapWidget(self, parent):
         lat, lng = self.__getLocation()
         mapHTML = self.__renderMapHTML([lat, lng])
 
-        w = QtWebEngineWidgets.QWebEngineView(parent)
+        w = QtWebEngineWidgets.QWebEngineView(parent) # Rassabery Pi ARM WebEngone not supported
+        # w = qt.QWidget(parent)
         w.setHtml(mapHTML)
         self.mapWidget = w
         return w
 
     def rerenderMapWidget(self):
-        self.mapWidget.setHtml(self.__renderMapHTML(self.__getLocation()))
+        # self.mapWidget.setHtml(self.__renderMapHTML(self.__getLocation()))
         self.mapWidget.show()
 
     def addObstacle(self, obstacle: Obstacle):

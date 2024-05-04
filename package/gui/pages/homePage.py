@@ -72,8 +72,8 @@ class HomePage(QWidget):
 
         self.setLayout(layout)
         #if recived obstacle for AI model
-        # self.updateWarning("obstacle away")
-        # self.updateImagePopup("D:\Valeo GradProj\obstacle.jpg")
+        self.updateWarning("obstacle away")
+        self.updateImagePopup("C:/Users/Zyad/Desktop/AROS_Client/image.png")
 
     def show_image_popup(self, title, image_path):
         # Create and show the image popup dialog with the main window as the parent
