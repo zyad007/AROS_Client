@@ -1,5 +1,6 @@
 from PyQt5 import QtGui, QtCore, QtWidgets
 from PyQt5.QtWidgets import QApplication, QWidget, QLineEdit, QVBoxLayout , QHBoxLayout , QTextEdit , QSizePolicy , QFrame
+
 from package.gui.pages.homePage import HomePage
 from package.gui.buttonList import ButtonList
 
